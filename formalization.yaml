@@ -1,0 +1,49 @@
+version: v0.4
+project:
+  name: "Separated distances in the fixed space R^29"
+  description: >-
+    For every natural N there is n at least N and an n-point set in the single
+    fixed Euclidean space R^29 whose distances on different unordered pairs of
+    distinct points differ by at least one, with diameter strictly below
+    (499/500)n^2. The sizes n form an unbounded set; no claim is made for every
+    large n. As a consequence the formalization proves the negation of the
+    fixed-dimension proposition for Erdős Problem 670 exactly as stated in
+    Formal Conjectures at commit 2f91d251c07fbbaf9435166d47c11e884a08a6cf,
+    using d = 29 and epsilon = 1/1000. No optimality, smallest dimension or
+    independent priority review is claimed.
+  authors:
+    - "John Tripodo"
+  responsible_maintainers:
+    - "John Tripodo"
+  license: MIT
+classification:
+  arxiv: [math.CO, math.MG]
+  msc2020: []
+sources:
+  - title: "Separated distances in fixed dimension"
+    type: paper
+    authors: ["John Tripodo"]
+    relationship: formalizes
+    url: "https://hexagonmath.org/2610.00254v2"
+    note: "The dimension-29 theorem of this preprint, in the unbounded-subsequence form stated in Challenge.lean. The preprint's written all-n corollary is not formalized here."
+  - title: "Formal Conjectures: Erdős Problem 670"
+    type: other
+    relationship: states
+    url: "https://github.com/google-deepmind/formal-conjectures/blob/2f91d251c07fbbaf9435166d47c11e884a08a6cf/FormalConjectures/ErdosProblems/670.lean"
+    note: "Source of the verbatim proposition and definition negated by Erdos670.not_erdos_670."
+related_formalizations:
+  - id: "https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-14-000003"
+    relationship: "Earlier registered formalization by the same author of a different theorem: every n at least 68000 in R^458999 with diameter below (37/50)n^2."
+    note: "26 of the 60 supporting modules here are byte-identical to modules of that registered package."
+automation:
+  methods:
+    - method: agent
+      tool_setup: "AI-assisted proof development, formalization and porting using ChatGPT/Codex and Claude; no specific model identity is asserted."
+  notes: "John Tripodo directed AI-assisted proof development and formalization. No personal human proof verification is claimed. John accepts responsibility as the human maintainer, including handling reported issues and corrections."
+review:
+  status: unchecked
+  notes: >-
+    Local sandboxed lake comparator preflight (with --paranoid) passed on Lean
+    4.35.0-rc2 with Mathlib 065356127b1dc0016f66b7283ce0ce2c4055aa55.
+    Official Palomar verification pending. No human independent mathematical
+    or priority review, journal acceptance or platform endorsement is claimed.
