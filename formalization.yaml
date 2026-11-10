@@ -28,13 +28,30 @@ sources:
     note: "The dimension-29 theorem of this preprint, in the unbounded-subsequence form stated in Challenge.lean. The preprint's written all-n corollary is not formalized here."
   - title: "Formal Conjectures: Erdős Problem 670"
     type: other
-    relationship: states
+    relationship: background
     url: "https://github.com/google-deepmind/formal-conjectures/blob/2f91d251c07fbbaf9435166d47c11e884a08a6cf/FormalConjectures/ErdosProblems/670.lean"
-    note: "Source of the verbatim proposition and definition negated by Erdos670.not_erdos_670."
+    note: "Source of the verbatim proposition and definition negated by Erdos670.erdos_670 (Apache License 2.0)."
+  - title: "Erdős's diameter conjecture for separated distances fails in high dimensions"
+    type: paper
+    authors: ["Boon Suan Ho"]
+    relationship: background
+    url: "https://arxiv.org/abs/2604.15305"
+    note: "Growing-dimension counterexample (dimension n^2 - n). Its Remark 9 states the fixed-dimension question is open; it does not decide it."
+  - title: "Some unsolved problems"
+    type: paper
+    authors: ["Paul Erdős"]
+    relationship: background
+    note: "Combinatorics, geometry and probability (Cambridge, 1993), 1997, 1-10. Source of the question; Erdős proved the case d = 1."
 related_formalizations:
   - id: "https://palomar-registry.org/entry.html?id=PALOMAR-2026-10-14-000003"
-    relationship: "Earlier registered formalization by the same author of a different theorem: every n at least 68000 in R^458999 with diameter below (37/50)n^2."
-    note: "26 of the 60 supporting modules here are byte-identical to modules of that registered package."
+    relationship: other
+    note: "Earlier registered formalization by the same author of a different theorem: every n at least 68000 in R^458999 with diameter below (37/50)n^2. 26 supporting modules here are byte-identical to modules of that package."
+  - id: "https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension"
+    relationship: other
+    note: "Earlier unregistered public Lean negation by the same author of the same Formal Conjectures statement, in R^81794."
+  - id: "https://github.com/boonsuan/erdos670"
+    relationship: independent
+    note: "Ho's formalization of the growing-dimension result; a different theorem."
 automation:
   methods:
     - method: agent
