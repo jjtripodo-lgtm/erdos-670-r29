@@ -2,6 +2,14 @@
 
 A Lean 4 formalization of a negative answer to the fixed-dimension form of Erdős Problem 670.
 
+## Registered formal statement and review scope (18 November 2026)
+
+**Palomar record:** [PALOMAR-2026-11-11-000002](https://palomar-registry.org/entry.html?id=PALOMAR-2026-11-11-000002) (registered 11 November 2026). This public package supplies the selected Lean source and the statement-comparison inputs. `Challenge.lean` contains intentional `sorry` placeholders because it is the *statement* side of the comparison; `Solution.lean` supplies the proofs. The [comparator configuration](comparator.json) selects both named theorems below and permits only `propext`, `Quot.sound` and `Classical.choice`. A registry verification report is evidence about these **exact formal statements**, not a scholarly novelty or independent human referee determination.
+
+**Scope:** the registered witness is an **unbounded subsequence** of sizes in the *one fixed dimension* 29, with diameter `< (499/500)n²`. This already negates the fixed-dimension eventual lower-bound statement at `d=29` and `ε=1/1000`; it does **not** assert the same numerical bound for every sufficiently large `n`. The written every-`n>=400000` corollary with coefficient `0.999` and the paper's arbitrary-`ε` family are **not selected** in this Palomar entry. Those claims have their own [paper and public companion](https://github.com/jjtripodo-lgtm/erdos-670-fixed-dimension) with distinct verification scopes.
+
+**Reproducibility and review:** the commands below enable a fresh check on a reader's machine; this documentation update did **not** run a new Lean build. Independent geometric proof review, global priority clearance, journal review and acceptance by the Erdős Problems editor are not claimed. The source metadata's pre-registration status describes its original submission checkpoint, not the later registry outcome.
+
 ## Result
 
 A finite set of points has *separated distances* if the distances attached to any two different unordered pairs of distinct points differ by at least one. Erdős asked whether every such n-point set in R^d must have diameter at least (1 + o(1)) n² ([erdosproblems.com/670](https://www.erdosproblems.com/670)).
