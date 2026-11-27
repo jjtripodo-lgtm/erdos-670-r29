@@ -72,4 +72,4 @@ lake comparator --config comparator.json --paranoid   # also runs every bundled 
 
 ## Licence
 
-MIT. See `LICENSE`.
+MIT. See `LICENSE`. The declarations copied from Formal Conjectures are under the Apache License 2.0; see `LICENSE-APACHE-2.0`.
